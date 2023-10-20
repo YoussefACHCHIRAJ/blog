@@ -1,0 +1,10 @@
+body{
+    background-color: whitesmoke;
+    max-width: 600px;
+    margin: auto;
+    color: #222;
+}
+
+p{
+    line-height: 1.6;
+}
