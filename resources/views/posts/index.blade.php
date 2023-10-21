@@ -8,12 +8,12 @@
             <x-post-featured :post="$posts[0]" />
 
             @if ($posts->count() > 1)
-               <x-post-grid :posts="$posts" />
-               
+                <x-post-grid :posts="$posts" />
             @endif
         @else
             <p class="text-center">No Posts yet. Pleaze chech later</p>
         @endif
+        {{ $posts->links() }}
     </main>
 
 </x-layout>
