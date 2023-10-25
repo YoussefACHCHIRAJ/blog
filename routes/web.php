@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostCommentController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionController;
@@ -26,6 +27,8 @@ Route::get('/authors/{author:username}', function(User $author){
         'posts' => $author->posts,
     ]);
 });
+
+Route::post('posts/{post:slug}/comments', [PostCommentController::class,'store']);
 
 
 Route::get('register', [RegisterController::class, 'create'])->middleware('guest');
